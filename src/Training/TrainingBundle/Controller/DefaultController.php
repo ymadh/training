@@ -27,4 +27,14 @@ class DefaultController extends AbstractController
     {
         return array('name' => 'about');
     }
+
+    /**
+     * @Route("/sidebar")
+     * @Secure(roles="ROLE_USER")
+     * @Template("TrainingBundle:Default:sidebar.html.twig")
+     */
+    public function sidebarAction()
+    {
+        return array('test' => 'test');
+    }
 }

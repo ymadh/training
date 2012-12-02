@@ -5,13 +5,33 @@
 {% endblock %}
 
 {% block body_container_main %}
-    <form id="behavior-form" action="{{ path('newBehavior') }}" method="post" {{ form_enctype(behaviorForm) }} novalidate>
-       {{ form_widget(behaviorForm) }}
-       <input type="submit" value="Submit" />
-   </form>
+
+
+    <h4 class="alert_info">Welcome to the free MediaLoot admin panel template, this could be an informative message.</h4>
+    <h4 class="alert_warning">A Warning Alert</h4>
+
+      <h4 class="alert_error">An Error Message</h4>
+
+      <h4 class="alert_success">A Success Message</h4>
+    <article class="module width_full">
+        <form id="behavior-form" action="{{ path('newBehavior') }}" method="post" {{ form_enctype(behaviorForm) }} novalidate>
+           <fieldset>
+               {{ form_widget(behaviorForm) }}
+               </fieldset>
+           <input type="submit" value="Submit" />
+        </form>
+    </article>
+
 {% endblock %}
+
 
 {% block body_container_footer %}
     Do not even think you can copy this.
 {% endblock %}
 
+{% block body_js %}
+    {{ parent() }}
+    <script type="text/javascript">
+            $('.date').datepicker({ dateFormat: 'dd-mm-yy' })
+    </script>
+{% endblock %}

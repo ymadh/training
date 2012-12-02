@@ -30,7 +30,12 @@ class TrainingSessionController extends AbstractController
                          'required'=>false,
                     ))
                    ->add('name','text',array('label'=>'Training Session Title'))
-                   ->add('sessionDate','date',array('label'=>'Training Date'))
+                   ->add('sessionDate','date',array(
+                        'label'=>'Training Date',
+                        'widget' => 'single_text',
+                        'format' => 'dd-MM-yyyy',
+                        'attr' => array('class' => 'date')
+                    ))
                    ->getForm();
 
        // get the post

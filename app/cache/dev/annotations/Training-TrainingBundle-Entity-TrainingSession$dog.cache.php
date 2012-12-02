@@ -1,1 +1,0 @@
-<?php return unserialize('a:2:{i:0;O:30:"Doctrine\\ORM\\Mapping\\ManyToOne":4:{s:12:"targetEntity";s:3:"Dog";s:7:"cascade";a:1:{i:0;s:3:"all";}s:5:"fetch";s:4:"LAZY";s:10:"inversedBy";s:9:"behaviors";}i:1;O:30:"Doctrine\\ORM\\Mapping\\JoinTable":4:{s:4:"name";s:21:"training_dog_sessions";s:6:"schema";N;s:11:"joinColumns";a:0:{}s:18:"inverseJoinColumns";a:0:{}}}');

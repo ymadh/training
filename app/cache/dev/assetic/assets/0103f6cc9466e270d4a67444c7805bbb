@@ -1,5 +1,0 @@
-#toolbar {
-    margin: auto;
-    border: 1px solid black;
-    height: 20px;
-}

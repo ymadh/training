@@ -1,0 +1,8 @@
+{% extends 'TrainingBundle::layout.html.twig' %}
+{% block body %}
+
+    <form id="registration-form" action="{{ path('register') }}" method="post" {{ form_enctype(userForm) }} novalidate>
+        {{ form_widget(userForm) }}
+        <input type="submit" value="Submit" />
+    </form>
+{% endblock %}

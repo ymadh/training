@@ -1,0 +1,17 @@
+{% extends "TrainingBundle::layout.html.twig" %}
+
+{% block head_title %}
+    Training Session
+{% endblock %}
+
+{% block body_container_main %}
+    <form id="behavior-form" action="{{ path('newBehavior') }}" method="post" {{ form_enctype(behaviorForm) }} novalidate>
+       {{ form_widget(behaviorForm) }}
+       <input type="submit" value="Submit" />
+   </form>
+{% endblock %}
+
+{% block body_container_footer %}
+    Do not even think you can copy this.
+{% endblock %}
+

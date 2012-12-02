@@ -1,0 +1,14 @@
+{% extends "OryzoneBoilerplateBundle::html5.html.twig" %}
+
+{% block head_css %}
+    {% stylesheets
+        '@TrainingBundle/Resources/public/css/global.css'
+    %}
+    <link href="{{ asset_url }}" rel="stylesheet" type="text/css" />
+    {% endstylesheets %}
+{% endblock %}
+
+{% block body_container_header %}
+    <div id="toolbar">test</div>
+{% endblock %}
+

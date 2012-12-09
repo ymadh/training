@@ -1,37 +1,34 @@
 {% extends "TrainingBundle::layout.html.twig" %}
 
+
 {% block head_title %}
     Training Session
 {% endblock %}
 
-{% block body_container_main %}
+{% block head_css %}
+    {{ parent() }}
+{% stylesheets
+    '@TrainingBundle/Resources/public/css/global.css'
+%}
+<link rel="stylesheet"  href="{{ asset_url }}" >
+{% endstylesheets %}
+{% endblock %}
+
+{% block body %}
 
 
-    <h4 class="alert_info">Welcome to the free MediaLoot admin panel template, this could be an informative message.</h4>
-    <h4 class="alert_warning">A Warning Alert</h4>
-
-      <h4 class="alert_error">An Error Message</h4>
-
-      <h4 class="alert_success">A Success Message</h4>
-    <article class="module width_full">
-        <form id="behavior-form" action="{{ path('newBehavior') }}" method="post" {{ form_enctype(behaviorForm) }} novalidate>
+    <form id="behavior-form" action="{{ path('newBehavior') }}" method="post" {{ form_enctype(behaviorForm) }} novalidate>
            <fieldset>
                {{ form_widget(behaviorForm) }}
                </fieldset>
            <input type="submit" value="Submit" />
-        </form>
-    </article>
+    </form>
 
-{% endblock %}
-
-
-{% block body_container_footer %}
-    Do not even think you can copy this.
 {% endblock %}
 
 {% block body_js %}
     {{ parent() }}
     <script type="text/javascript">
-            $('.date').datepicker({ dateFormat: 'dd-mm-yy' })
+            $('.date').datepicker({ dateFormat: 'dd-mm-yy' });
     </script>
 {% endblock %}

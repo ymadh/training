@@ -48,22 +48,12 @@ class TrainingSessionController extends AbstractController
 
                $session = $behaviorForm->getData();
 
-               $this->tagManager = new \DoctrineExtensions\Taggable\TagManager($this->getEM());
-
-               $this->getEM()->getEventManager()->addEventSubscriber(new \DoctrineExtensions\Taggable\TagListener($this->tagManager));
-
-
-                // ask the tag manager to create a Tag object
-                 $fooTag = $this->tagManager->loadOrCreateTag('foo');
-
                $this->getEM()->persist($session);
                $this->getEM()->flush();
 
-               $this->tagManager->addTags($fooTag, $session);
-
-
                return $this->render(
-                   "TrainingBundle:TrainingSession:success.html.twig"
+                   "TrainingBundle:TrainingSession:success.html.twig",
+                   array('session' => $session)
                );
            }
 

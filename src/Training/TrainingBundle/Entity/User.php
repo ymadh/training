@@ -30,6 +30,7 @@ class User extends BaseUser
 
     /**
      * @ORM\OneToMany(targetEntity="Dog", targetEntity="Dog", mappedBy="user")
+     * @ORM\OrderBy({"name" = "ASC"})
      */
     protected $dogs;
 

@@ -25,8 +25,6 @@ class TrainingSession
      */
     protected $name;
 
-
-
     /**
      *
      * protected $slug;

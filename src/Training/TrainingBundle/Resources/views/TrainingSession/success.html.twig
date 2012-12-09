@@ -1,1 +1,34 @@
-new behavior
+{% extends "TrainingBundle::layout.html.twig" %}
+
+
+{% block head_title %}
+    Training Session
+{% endblock %}
+
+{% block head_css %}
+    {{ parent() }}
+{% stylesheets
+    '@TrainingBundle/Resources/public/css/global.css'
+%}
+<link rel="stylesheet"  href="{{ asset_url }}" >
+{% endstylesheets %}
+{% endblock %}
+
+{% block body_container_main %}
+
+<iframe width="560" height="315" src="{{ session.name }}" frameborder="0" allowfullscreen></iframe>
+
+{% endblock %}
+
+
+{% block body_container_footer %}
+    Do not even think you can copy this.
+{% endblock %}
+
+{% block body_js %}
+    {{ parent() }}
+    <script type="text/javascript">
+            $('.date').datepicker({ dateFormat: 'dd-mm-yy' });
+        alert('hi');
+    </script>
+{% endblock %}

@@ -78,6 +78,16 @@ class Dog
     public function getUser()
     {
         return $this->user;
+
     }
+
+    /**
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
 }
 ?>

@@ -1,0 +1,8 @@
+{% extends 'TrainingBundle::layout.html.twig' %}
+{% block body %}
+
+    <form id="dog-form" action="{{ path('editDog', {'id':dog.id}) }}" method="post" {{ form_enctype(dogForm) }} novalidate>
+        {{ form_widget(dogForm) }}
+        <input type="submit" value="Submit" />
+    </form>
+{% endblock %}
